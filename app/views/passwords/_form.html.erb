@@ -4,19 +4,19 @@
       <div><%= message %></div>
     <% end %>
   <% end %>
-  <div>
+  <div class="field">
     <%= f.label :url %>
     <%= f.url_field :url %>
   </div>
-  <div>
+  <div class="field">
     <%= f.label :username %>
     <%= f.text_field :username %>
   </div>
-  <div>
+  <div class="field">
     <%= f.label :password %>
     <%= f.text_field :password %>
   </div>
-  <div>
+  <div class="field">
     <%= f.submit %>
     <%= button_tag 'Delete', form: 'delete_password' if f.object.persisted? && current_user_password.deletable? %>
   </div>
